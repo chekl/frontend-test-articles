@@ -19,7 +19,9 @@ type Props = {
 
 const Article = () => {  
   let { id } = useParams();
-  const article: Props = useSelector(state => selectById(state, id))
+  
+  const article: Props = useSelector(state => selectById(state, id || "0"))
+
   
   return (
     <div >

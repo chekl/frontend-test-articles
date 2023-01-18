@@ -53,7 +53,7 @@ export default articleSlice.reducer
 
 export const selectAll = (state: { articles: any; }) => state.articles
 
-export const selectById = (state: any, id: string | undefined) =>
-  state.articles.find((article: { id: string; }) => article.id == id)
+export const selectById = (state: any, id: string) =>
+  state.articles.find((article: { id: number; }) => article.id === +id)
 
 export const selectStatus = (state: any) => state.status
